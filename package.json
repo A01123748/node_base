@@ -17,7 +17,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo \"[Husky] pre-commit\""
+      "pre-commit": "echo \"[Husky] pre-commit\"",
+      "pre-push": "test:unit"
     }
   },
   "author": "Eliseo Fuentes",
