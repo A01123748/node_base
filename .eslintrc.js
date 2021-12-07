@@ -5,8 +5,8 @@ module.exports = {
     jest: true,
   },
   extends: [
-    'eslint-recommended',
-    'plugin:@typescrypt-eslint/recommended',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'airbnb-base',
     'plugin:prettier/recommended',
     'plugin:import/errors',
@@ -36,11 +36,14 @@ module.exports = {
   },
   settings: {
     'import/parsers': { '@typescript-eslint/parser': ['.ts'] },
-  },
-  'import/resolver': {
-    typescrypt: {
-      alwaysTryTypes: true,
-      project: './tsconfig.json',
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+      typescript: {
+        alwaysTryTypes: true,
+        project: './tsconfig.json',
+      },
     },
   },
 };
