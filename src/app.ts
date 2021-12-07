@@ -2,7 +2,9 @@ import 'dotenv/config';
 import dotenv from 'dotenv-safe';
 import createServer from './server';
 
-dotenv.config({ example: './config/.env.example', path: './config/.env' });
+dotenv.config({
+  allowEmptyValues: true,
+});
 
 const startServer = () => {
   const app = createServer();
