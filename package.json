@@ -11,7 +11,14 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:unit": "ENV_FILE=./config/.env.test jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo \"[Husky] pre-commit\""
+    }
   },
   "author": "Eliseo Fuentes",
   "license": "ISC",
