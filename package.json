@@ -15,12 +15,6 @@
     "lint": "prettier --check .",
     "format": "prettier --write ."
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "prettier --write . && git add -A .",
-      "pre-push": "test:unit"
-    }
-  },
   "author": "Eliseo Fuentes",
   "license": "ISC",
   "dependencies": {
@@ -55,6 +49,9 @@
     "typescript": "^4.5.2"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.ts": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
   }
 }
